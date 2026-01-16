@@ -20,7 +20,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     public Student registerStudent(Student student) {
         JpaStudentEntity jpaStudent = new JpaStudentEntity(student);
         jpaStudentRepository.save(jpaStudent);
-        return student;
+        return new Student(jpaStudent.getId(), jpaStudent.getName(), jpaStudent.getClassroomId(), jpaStudent.getRegistration());
     }
 
     @Override
