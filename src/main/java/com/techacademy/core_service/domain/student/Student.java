@@ -1,15 +1,15 @@
 package com.techacademy.core_service.domain.student;
 
-public class StudentEntity {
+public class Student {
     private Long id;
     private String name;
     private Long classroomId;
     private String registration;
 
-    public StudentEntity(){
+    public Student(){
     }
 
-    public StudentEntity(Long id, String name, Long classroomId, String registration) {
+    public Student(Long id, String name, Long classroomId, String registration) {
         this.id = id;
         this.name = name;
         this.classroomId = classroomId;
