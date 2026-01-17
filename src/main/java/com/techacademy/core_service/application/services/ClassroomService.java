@@ -1,0 +1,31 @@
+package com.techacademy.core_service.application.services;
+
+import com.techacademy.core_service.adapters.out.repositories.ClassroomRepositoryImpl;
+import com.techacademy.core_service.domain.classroom.Classroom;
+
+import java.util.List;
+import java.util.Optional;
+
+public class ClassroomService {
+    private final ClassroomRepositoryImpl classroomRepository;
+
+    public ClassroomService(ClassroomRepositoryImpl classroomRepository){
+        this.classroomRepository = classroomRepository;
+    }
+
+    public Optional<Classroom> findClassroomById(Long id) {
+        return classroomRepository.findClassroomById(id);
+    }
+
+    public List<Classroom> findAllClassrooms() {
+        return classroomRepository.findAllClassrooms();
+    }
+
+    public Classroom registerClassroom(Classroom classroom) {
+        return classroomRepository.registerClassroom(classroom);
+    }
+
+    public void deleteClassroomById(Long id) {
+        classroomRepository.deleteClassroomById(id);
+    }
+}
