@@ -23,12 +23,12 @@ public class JpaStudentEntity {
     private Long id;
     private String name;
     private Long classroomId;
-    private String registration;
+    private String registrationString;
 
     public JpaStudentEntity(Student student){
         this.id = student.getId();
         this.name = student.getName();
         this.classroomId = student.getClassroomId();
-        this.registration = student.getRegistration();
+        this.registrationString = student.getRegistrationString();
     }
 }

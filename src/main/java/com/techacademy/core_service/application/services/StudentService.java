@@ -2,6 +2,7 @@ package com.techacademy.core_service.application.services;
 
 import com.techacademy.core_service.adapters.out.repositories.StudentRepositoryImpl;
 import com.techacademy.core_service.domain.student.Student;
+import com.techacademy.core_service.domain.student.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 @Service
 public class StudentService {
 
-    private final StudentRepositoryImpl studentRepository;
+    private final StudentRepository studentRepository;
 
     public StudentService(StudentRepositoryImpl studentRepository){
         this.studentRepository = studentRepository;

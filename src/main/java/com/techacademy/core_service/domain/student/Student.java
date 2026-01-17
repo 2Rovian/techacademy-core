@@ -4,16 +4,16 @@ public class Student {
     private Long id;
     private String name;
     private Long classroomId;
-    private String registration;
+    private String registrationString;
 
     public Student(){
     }
 
-    public Student(Long id, String name, Long classroomId, String registration) {
+    public Student(Long id, String name, Long classroomId, String registrationString) {
         this.id = id;
         this.name = name;
         this.classroomId = classroomId;
-        this.registration = registration;
+        this.registrationString = registrationString;
     }
 
     public Long getId() {
@@ -40,11 +40,11 @@ public class Student {
         this.classroomId = classroomId;
     }
 
-    public String getRegistration() {
-        return registration;
+    public String getRegistrationString() {
+        return registrationString;
     }
 
-    public void setRegistration(String registration) {
-        this.registration = registration;
+    public void setRegistrationString(String registrationString) {
+        this.registrationString = registrationString;
     }
 }

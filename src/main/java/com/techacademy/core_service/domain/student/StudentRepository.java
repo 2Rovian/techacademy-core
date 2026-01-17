@@ -7,4 +7,6 @@ public interface StudentRepository {
     Student findStudentById(Long id);
     List<Student> findAllStudents();
     void deleteStudentById(Long id);
+
+    List<Student> findStudentsByClassroomId(Long id);
 }

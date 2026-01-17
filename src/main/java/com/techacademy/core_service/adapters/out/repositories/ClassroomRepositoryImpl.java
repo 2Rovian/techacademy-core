@@ -3,11 +3,13 @@ package com.techacademy.core_service.adapters.out.repositories;
 import com.techacademy.core_service.adapters.out.entities.JpaClassroomEntity;
 import com.techacademy.core_service.domain.classroom.Classroom;
 import com.techacademy.core_service.domain.classroom.ClassroomRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository
 public class ClassroomRepositoryImpl implements ClassroomRepository {
 
     private final JpaClassroomRepository jpaClassroomRepository;
