@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/classroom")
+@RequestMapping("/api/classrooms")
 public class ClassroomController {
     private final ClassroomService classroomService;
 
@@ -19,7 +19,7 @@ public class ClassroomController {
         this.classroomService = classroomService;
     }
 
-    @GetMapping
+    @GetMapping(path = "/id")
     public ResponseEntity<Optional<Classroom>> getClassroomById(@PathVariable Long id) {
         return ResponseEntity.ok(classroomService.findClassroomById(id));
     }
