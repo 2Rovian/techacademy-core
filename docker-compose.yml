@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  core-service:
+    build: .
+    container_name: core-service
+    ports:
+      - "8081:8080"
+    depends_on:
+      - core-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://core-db:5432/core_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+
+  academic-service:
+    build:
+      context: ../academic-service
+    container_name: academic-service
+    ports:
+      - "8082:8080"
+    depends_on:
+      - academic-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://academic-db:5432/techacademy-academic
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+
+  core-db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: core_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+
+  academic-db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: techacademy-academic
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5434:5432"
