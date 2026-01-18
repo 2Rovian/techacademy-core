@@ -17,8 +17,25 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping
-    public ResponseEntity<List<Student>> getAllStudents(){
+//    @GetMapping    //  GET /api/students?classroomId=1
+//    public ResponseEntity<List<Student>> getAllStudentsByClassroomId(@RequestParam(required = false) Long studentId){
+//        return ResponseEntity.ok(studentService.findStudentsByClassroomId(studentId));
+//    }
+//
+//    @GetMapping
+//    public ResponseEntity<List<Student>> getAllStudents(){
+//        return ResponseEntity.ok(studentService.findAllStudents());
+//    }
+
+    @GetMapping    //  GET /api/students?classroomId=1
+    public ResponseEntity<List<Student>> getAllStudentsByClassroomId(@RequestParam(required = false) Long classroomId){
+
+        if(classroomId != null) {
+            return ResponseEntity.ok(
+                    studentService.findStudentsByClassroomId(classroomId)
+            );
+        }
+
         return ResponseEntity.ok(studentService.findAllStudents());
     }
 

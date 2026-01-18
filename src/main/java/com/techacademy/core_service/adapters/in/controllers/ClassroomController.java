@@ -25,7 +25,7 @@ public class ClassroomController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Classroom>> getAllClassroom() {
+    public ResponseEntity<List<Classroom>> getAllClassrooms() {
         return ResponseEntity.ok(classroomService.findAllClassrooms());
     }
 
