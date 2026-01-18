@@ -19,7 +19,7 @@ public class ClassroomController {
         this.classroomService = classroomService;
     }
 
-    @GetMapping(path = "/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Optional<Classroom>> getClassroomById(@PathVariable Long id) {
         return ResponseEntity.ok(classroomService.findClassroomById(id));
     }
@@ -34,7 +34,7 @@ public class ClassroomController {
         return ResponseEntity.ok(classroomService.registerClassroom(classroom));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteClassroom(@PathVariable Long id) {
         classroomService.deleteClassroomById(id);
     }

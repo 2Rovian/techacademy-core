@@ -39,7 +39,7 @@ public class StudentController {
         return ResponseEntity.ok(studentService.findAllStudents());
     }
 
-    @GetMapping(path = "/id")
+    @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         return ResponseEntity.ok(studentService.findStudentById(id));
     }
@@ -49,7 +49,7 @@ public class StudentController {
         return ResponseEntity.ok(studentService.registerStudent(student));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
         studentService.deleteStudent(id);
     }
