@@ -5,7 +5,7 @@ services:
     build: .
     container_name: core-service
     ports:
-      - "8081:8080"
+      - "8081:8081"
     depends_on:
       - core-db
     environment:
@@ -18,7 +18,7 @@ services:
       context: ../academic-service
     container_name: academic-service
     ports:
-      - "8082:8080"
+      - "8082:8082"
     depends_on:
       - academic-db
     environment:
