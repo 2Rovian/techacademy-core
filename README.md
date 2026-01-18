@@ -1,4 +1,4 @@
-# Core Service — Gestão de Alunos e Turmas
+# 🏫 Core Service — Gestão de Alunos e Turmas
 
 Este repositório contém o **Core Service** do sistema de gestão escolar proposto no  
 [Desafio Técnico Júnior da StralooHealth](https://github.com/straloohealth/Teste-T-cnico---N-vel-Junior-2026.1).
@@ -7,32 +7,32 @@ O Core Service é responsável pela **gestão de alunos e turmas**, além de atu
 
 ---
 
-## Visão Geral
+## 📌 Visão Geral
 
 No contexto do desafio, o sistema foi dividido em dois serviços principais:
 
-### Core Service (este repositório)
+### 🧠 Core Service (este repositório)
 Responsável por:
 - Gestão de Alunos
 - Gestão de Turmas
 - Orquestração do domínio principal
 - Comunicação com o Academic Service para geração de boletins
 
-### Academic Service (repositório separado)
+### 📚 Academic Service (repositório separado)
 Responsável por:
 - Gestão de Disciplinas
 - Gestão de Notas dos alunos
 
 ---
 
-## Stack Tecnológica
+## 🏗 Stack Tecnológica
 
 - Java (Spring Boot)
 - PostgreSQL
 
 ---
 
-## Arquitetura
+## 🏗 Arquitetura
 
 - **Estilo arquitetural:** Microserviços com bancos de dados independentes  
 - **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)  
@@ -41,7 +41,7 @@ Responsável por:
 
 ## 📦 Modelos de Dados (Objetos)
 
-### Student
+### 🎓 Student
 ```
 {
   "id": 1,
@@ -51,7 +51,7 @@ Responsável por:
 }
 ```
 
-### Classroom 
+### 📚 Classroom 
 ```
 {
   "id": 1,
@@ -59,7 +59,7 @@ Responsável por:
 }
 ```
 
-## Student Controller
+## 🎓 Student Controller
 | Método | Endpoint             | Descrição             |
 | ------ | -------------------- | --------------------- |
 | GET    | `/api/students`      | Lista todos os alunos |
@@ -67,7 +67,7 @@ Responsável por:
 | POST   | `/api/students`      | Cria um novo aluno    |
 | DELETE | `/api/students/{id}` | Remove um aluno       |
 
-## Classroom Controller
+## 📚 Classroom Controller
 | Método | Endpoint               | Descrição             |
 | ------ | ---------------------- | --------------------- |
 | GET    | `/api/classrooms`      | Lista todas as turmas |
