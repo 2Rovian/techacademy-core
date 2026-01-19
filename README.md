@@ -5,6 +5,8 @@ Este repositório contém o **Core Service** do sistema de gestão escolar propo
 
 O Core Service é responsável pela **gestão de alunos e turmas**, além de atuar como **serviço orquestrador** no ecossistema de microserviços, realizando a comunicação com o serviço acadêmico para a geração de boletins escolares.
 
+[Repositório do microserviço de gestão de notas e boletim](https://github.com/2Rovian/techacademy-academic/)
+
 ---
 
 ## 📌 Visão Geral
