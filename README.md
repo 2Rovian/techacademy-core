@@ -75,6 +75,43 @@ Responsável por:
 | POST   | `/api/classrooms`      | Cria uma nova turma   |
 | DELETE | `/api/classrooms/{id}` | Remove uma turma      |
 
+## 🚀 Instalação
+
+### 1️⃣ Crie uma pasta para o projeto e acesse-a
+```
+mkdir techacademy && cd techacademy
+```
+
+### 2️⃣ Clone o repositório do core-service
+
+```
+git clone https://github.com/2Rovian/techacademy-core
+```
+
+### 3️⃣ Clone o repositório do academic-service
+
+```
+git clone https://github.com/2Rovian/techacademy-academic
+```
+
+### 4️⃣ Renomeie os diretórios
+
+```
+mv techacademy-core core-service
+```
+```
+mv techacademy-academic academic-service
+```
+
+### 5️⃣ Acesse o diretório do core-service
+```
+cd techacademy-core
+```
+### 6️⃣ Rode os containers
+```
+docker-compose up --build
+```
+
 ## 🔌 Ports
 - core-service: `http://localhost:8081`  
 - academic-service: `http://localhost:8082`
