@@ -18,24 +18,18 @@ Responsável por:
 - Gestão de Alunos
 - Gestão de Turmas
 - Orquestração do domínio principal
-- Comunicação com o Academic Service para geração de boletins
 
 ### 📚 Academic Service (repositório separado)
 Responsável por:
-- Gestão de Disciplinas
 - Gestão de Notas dos alunos
+- Emissão de Boletins
 
 ---  
 
-## 🏗 Stack Tecnológica
+## 🏗 Stack 
 
-- Java (Spring Boot)
-- PostgreSQL
-
----
-
-## 🏗 Arquitetura
-
+- **Linguagem e framework:** Java 21 (Spring Boot)
+- **Banco de dados:** PostgreSQL
 - **Estilo arquitetural:** Microserviços com bancos de dados independentes  
 - **Padrão adotado:** Arquitetura Hexagonal (Ports and Adapters)  
 
