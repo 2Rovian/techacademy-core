@@ -25,7 +25,7 @@ Responsável por:
 - Gestão de Disciplinas
 - Gestão de Notas dos alunos
 
----
+---  
 
 ## 🏗 Stack Tecnológica
 
@@ -61,11 +61,54 @@ Responsável por:
 }
 ```
 
+## Dois Requisitos Funcionais
+- Listar Turmas: Retornar todas as turmas cadastradas ( /api/classrooms )
+```
+[
+  {
+    "id": 1,
+    "name": "Classroom A"
+  },
+  {
+    "id": 2,
+    "name": "Classroom B"
+  },
+  {
+    "id": 3,
+    "name": "Classroom C"
+  }
+]
+```
+- Listar Alunos de uma Turma: Dado o identificador de uma turma, retornar a lista de alunos vinculados. ( /api/students?classroomId={id} )
+```
+[
+  {
+    "id": 1,
+    "name": "Alice Martins",
+    "classroomId": 1,
+    "registrationString": "REG-001"
+  },
+  {
+    "id": 2,
+    "name": "Bob Santos",
+    "classroomId": 1,
+    "registrationString": "REG-002"
+  },
+  {
+    "id": 3,
+    "name": "Carla Nogueira",
+    "classroomId": 1,
+    "registrationString": "REG-003"
+  }
+]
+```
+
 ## 🎓 Student Controller
 | Método | Endpoint             | Descrição             |
 | ------ | -------------------- | --------------------- |
 | GET    | `/api/students`      | Lista todos os alunos |
 | GET    | `/api/students/{id}` | Busca aluno por ID    |
+| GET    | `/api/students?classroomId={id}` | Busca aluno por identificador da turma    | 
 | POST   | `/api/students`      | Cria um novo aluno    |
 | DELETE | `/api/students/{id}` | Remove um aluno       |
 
