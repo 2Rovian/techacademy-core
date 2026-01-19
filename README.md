@@ -56,7 +56,7 @@ Responsável por:
 ```
 
 ## Dois Requisitos Funcionais
-- Listar Turmas: Retornar todas as turmas cadastradas ( /api/classrooms )
+- Listar Turmas: Retornar todas as turmas cadastradas ( GET /api/classrooms )
 ```
 [
   {
@@ -73,7 +73,7 @@ Responsável por:
   }
 ]
 ```
-- Listar Alunos de uma Turma: Dado o identificador de uma turma, retornar a lista de alunos vinculados. ( /api/students?classroomId={id} )
+- Listar Alunos de uma Turma: Dado o identificador de uma turma, retornar a lista de alunos vinculados. ( GET /api/students?classroomId={id} )
 ```
 [
   {
